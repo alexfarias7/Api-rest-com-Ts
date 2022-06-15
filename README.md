@@ -1,3 +1,3 @@
-# ApiRest com Typescript
+# API REST com Typescript
 
 Apirest usando typescript e express
