@@ -1,3 +1,12 @@
-console.log('app rodando')
+import  Express  from "express";
+import  config  from "config";
 
-export default 1
+const app = Express()
+//* json middleware
+app.use(Express.json())
+//* app port
+const port = config.get<number>('port')
+
+app.listen(port,async()=>{
+    console.log(`app rodando na porta:${port}`)
+})
