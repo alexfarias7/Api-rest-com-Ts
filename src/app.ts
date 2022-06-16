@@ -5,7 +5,7 @@ import Express from "express";
 import config from "config";
 import router from "./router";
 import db from '../config/db'
-
+import Logger from '../config/logger'
 
 const app = Express();
 //* json middleware
@@ -14,10 +14,10 @@ app.use(Express.json());
 const port = config.get<string>("port");
 //* app routes
 app.use("/api/", router);
-//* db
+//* LOGGER
 
 
 app.listen(port, async () => {
     await db()
-  console.log(`app rodando na porta:${port}`);
+  Logger.info(`app rodando na porta:${port}`);
 });
