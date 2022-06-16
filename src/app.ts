@@ -1,7 +1,11 @@
+
+import 'dotenv/config'
+
 import Express from "express";
 import config from "config";
 import router from "./router";
 import db from '../config/db'
+
 
 const app = Express();
 //* json middleware
